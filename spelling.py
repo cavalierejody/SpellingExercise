@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 #simple program to train with spelling listening
 #it requires espeak
 
