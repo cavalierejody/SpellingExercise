@@ -1,14 +1,20 @@
 #simple program to train with spelling listening
 #it requires espeak
 
-import subprocess
+import subprocess, string, random
 
 def execute_unix(inputcommand):
    p = subprocess.Popen(inputcommand, stdout=subprocess.PIPE, shell=True)
    (output, err) = p.communicate()
    return output
 
-stringa = "AHIEEIEIARIHEYAHIYREAIWRERYHAERIARYHERAIRHAERHYREAI"
+stringLen = int(input("How many letters for your exercise? "))
+
+letterList = []
+for i in range(stringLen):
+   letterList.append(random.choice(string.ascii_uppercase))
+
+stringa = ''.join(letterList)
 
 for c in stringa:
 
